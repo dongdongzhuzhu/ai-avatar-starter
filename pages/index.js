@@ -107,7 +107,7 @@ const Home = () => {
           </h2>
         </div>
         <div className="prompt-container">
-          <input  className="prompt-box" value='underwood intricate character portrait, intricate, beautiful, 8k resolution, dynamic lighting, hyperdetailed, quality 3D rendered, volumetric lighting, greg rutkowski, detailed background, artstation character portrait, dnd character portrait' onChange={onChange} />
+          <input  className="prompt-box" value={input}onChange={onChange} />
           <div className="prompt-buttons">
             <a
               className={
