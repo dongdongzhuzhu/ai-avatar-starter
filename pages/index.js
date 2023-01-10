@@ -6,7 +6,8 @@ import buildspaceLogo from '../assets/buildspace-logo.png';
 
 const Home = () => {
   const maxRetries = 20;
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState('underwood intricate character portrait, intricate, beautiful, 8k resolution, dynamic lighting, hyperdetailed, quality 3D rendered, volumetric lighting, greg rutkowski, detailed background, artstation character portrait, dnd character portrait');
+  const [value, setValue] = useState("提示语")
   const [img, setImg] = useState('');
   // Numbers of retries 
   const [retry, setRetry] = useState(0);
@@ -107,7 +108,8 @@ const Home = () => {
           </h2>
         </div>
         <div className="prompt-container">
-          <input  className="prompt-box" value={input}onChange={onChange} />
+        
+        <input className="prompt-box" value={input} onChange={onChange} />
           <div className="prompt-buttons">
             <a
               className={
