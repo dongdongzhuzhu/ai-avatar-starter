@@ -37,12 +37,14 @@ const Home = () => {
       setRetry(0);
     }
 
+    const finalInput = input.replace(/raza/gi, 'underwood');
+
     const response = await fetch('/api/generate', {
       method: 'POST',
       headers: {
         'Content-Type': 'image/jpeg',
       },
-      body: JSON.stringify({ input }),
+      body: JSON.stringify({ input: finalInput }),
     });
 
     const data = await response.json();
@@ -105,7 +107,7 @@ const Home = () => {
           </h2>
         </div>
         <div className="prompt-container">
-          <input className="prompt-box" value={input} onChange={onChange} />
+          <input  className="prompt-box" value='underwood intricate character portrait, intricate, beautiful, 8k resolution, dynamic lighting, hyperdetailed, quality 3D rendered, volumetric lighting, greg rutkowski, detailed background, artstation character portrait, dnd character portrait' onChange={onChange} />
           <div className="prompt-buttons">
             <a
               className={
